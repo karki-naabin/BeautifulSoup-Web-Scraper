@@ -12,7 +12,8 @@ soup = BeautifulSoup(source, 'lxml')
 
 #creating folder, csv file and parsing html rows to csv file
 os.mkdir('out')
-csv_file = open('out/'+'data.csv', 'w', newline='')
+os.mkdir('out/data')
+csv_file = open('out/data/'+'data.csv', 'w', newline='')
 csv_writer = csv.writer(csv_file,delimiter=",")
 new_list=[]
 for row in soup.find_all('tr'):
